@@ -3,7 +3,7 @@ This project aims to predict movie profit (revenue - budgeted cost) based on gen
 
 API Data accessed:
 IMBD movie informaiton
-https://www.npmjs.com/package/imdb-api
+http://www.imdb.com/interfaces/
 
 Movie DB profit information
 https://developers.themoviedb.org/3/movies/get-movie-details
