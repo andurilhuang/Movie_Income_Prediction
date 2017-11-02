@@ -14,12 +14,9 @@ Movie DB profit information https://developers.themoviedb.org/3/movies/get-movie
 The columns of the table are data sets described in the "Data" section.
 The rows are requirements of the data based on the questions you want to answer.
 
-|  Questions/Datasets     |  IMDB         |  Movie DB      |
-| ----------------------- |:-------------:| --------------:|
-|                         |               |                |
-|                         |               |                |
-|                         |               |                |
-|                         |               |                |
-|                         |               |                |
-|                         |               |                |
+|Questions/Datasets|IMDB|Movie DB|
+|---|---|---|
+|Basic Movie Info|:heavy_check_mark:||
+|Movie Profit Info||:heavy_check_mark:|
+|Movie Profit Prediction|:heavy_check_mark:|:heavy_check_mark:|
 
