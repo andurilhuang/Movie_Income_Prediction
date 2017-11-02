@@ -6,3 +6,6 @@ https://github.com/arun5493/Movie-User-Rating-and-Gross-Income-Prediction/blob/m
 
 Kaggle movieDB dataset (.csv)\
 https://www.kaggle.com/tmdb/tmdb-movie-metadata
+
+Kaggle imdb dataset (.csv)\
+https://www.kaggle.com/PromptCloudHQ/imdb-data
