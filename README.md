@@ -15,4 +15,4 @@ Movie DB profit information
 https://developers.themoviedb.org/3/movies/get-movie-details
 
 Collaborators:
-Anna Huang
+Anna Huang, Jingyun Chen, Weichen Xu, Chen Ren, Junmeng Zhu
