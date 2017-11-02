@@ -4,9 +4,9 @@ The movie industry is huge income generater in the entertainment industry, there
 ![Image of movie trends by time and lable](https://www.cdc.gov/pcd/issues/2012/images/12_0170_03.gif)
 ![Image of movie income](http://www.thesoobproductions.co.uk/wp-content/uploads/2012/10/movie-money-film-reel.ju_.09.jpg)
 
-This project aims to **predict movie profit (revenue - budgeted cost)** based on genre, director(s), actor(s)/actress(es), release season (month), rating (R, PG13...), other movies released in the same time and popularity (number of votes). 
+This project aims to **predict movie profit (revenue - budgeted cost)** based on genre, director(s), actor(s)/actress(es), release season (month), rating (R, PG13...), other movies released in the same time, average user ratings from IMBD and popularity (number of votes). We also consider to do a sentiment analysis on movie reviews and use the results as predictors to predict movie profit.  
 
-There are two datasets for this project. The first is the basic details regarding movies, including genre, directors, actors, lables, release, rating, and popularity. This data will be coming from an API call to IMDB. The second set of data looks at profit information regarding a movie. The two datasets will be linked through **imdb id** which is available on both datasets as unique identifier.
+There are two datasets for this project. The first is the basic details regarding movies, including genre, directors, actors, lables, release, rating, and popularity. This data will be coming from an API call to IMDB. The second set of data looks at profit information and reviews regarding a movie. The two datasets will be linked through **imdb id** which is available on both datasets as unique identifier.
 
 API Data accessed:
 IMBD movie informaiton
