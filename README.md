@@ -2,7 +2,7 @@
 The movie industry is huge income generater in the entertainment industry, there are many variables that contributes to how successful a movie is, but it's hard to understand how these variables work. 
 
 ![Image of movie trends by time and lable](https://www.cdc.gov/pcd/issues/2012/images/12_0170_03.gif)
-![Image of movie income] (http://www.thesoobproductions.co.uk/wp-content/uploads/2012/10/movie-money-film-reel.ju_.09.jpg)
+![Image of movie income](http://www.thesoobproductions.co.uk/wp-content/uploads/2012/10/movie-money-film-reel.ju_.09.jpg)
 
 This project aims to **predict movie profit (revenue - budgeted cost)** based on genre, director(s), actor(s)/actress(es), release season (month), rating (R, PG13...), other movies released in the same time and popularity (number of votes). 
 
