@@ -9,3 +9,6 @@ https://www.kaggle.com/tmdb/tmdb-movie-metadata
 
 Kaggle imdb dataset (.csv)\
 https://www.kaggle.com/PromptCloudHQ/imdb-data
+
+Kaggle movieDB dataset_with_budget (.csv)\
+https://www.kaggle.com/rounakbanik/the-movies-dataset/data
