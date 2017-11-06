@@ -22,7 +22,7 @@ def get_tmdb_id_list():
                     + "&language=en-US&sort_by=release_date.asc" \
                     + "&include_adult=false&include_video=false" \
                     + "&page=%d" \
-                    + "&year=%d" 
+                    + "&primary_release_year=%d" 
     for n in page_num:
         for yr in year:
             rq = requests.get(tmdb_id_query % (TMDB_KEY,n,yr)).json()
@@ -41,8 +41,9 @@ def get_profit():
     profit_dict_list = []   
     for id in TMDB_ID_LIST:    
         request = requests.get(query %(id,TMDB_KEY)).json()
-        profit_dict_list.append({'imdb_id':request['imdb_id'], 'profit': (request['revenue']-request['budget'])})
+        profit_dict_list.append({'imdb_id':request['imdb_id'], 'revenue': request['revenue'], 'budget':request['budget']})
     
     profit = pd.DataFrame(profit_dict_list)
-    profit_df = profit[profit['profit']>0]
     profit_df.to_csv('profit_by_imdb_id.csv')
+    
+get_profit()    

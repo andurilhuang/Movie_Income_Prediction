@@ -18,11 +18,16 @@ def combine_data():
         if r.status_code == 200:
             rq = requests.get(query % (id,OMDB_KEY)).json()
             dict_list.append({'imdbID':id,
+                            'Title': rq['Title'],
+                            'Country':rq['Country'],
+                            'Language':rq['Language'],
+                            ''
                             'Year' : rq['Year'], 
                             'Rated':rq['Rated'],
                             'Genre':rq['Genre'],
                             'Actors':rq['Actors'],
                             'Director':rq['Director'],
+                            'Runtime':rq['Runtime'],
                             'IMDB Rating': rq['imdbRating'],
                             'IMDB Votes': rq['imdbVotes'],
                             'Production':rq['Production'],
