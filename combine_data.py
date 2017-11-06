@@ -21,8 +21,8 @@ def combine_data():
                             'Title': rq['Title'],
                             'Country':rq['Country'],
                             'Language':rq['Language'],
-                            ''
-                            'Year' : rq['Year'], 
+                            'Released':rq['Released'],
+                            'Year' : rq['Year'],
                             'Rated':rq['Rated'],
                             'Genre':rq['Genre'],
                             'Actors':rq['Actors'],
@@ -30,7 +30,7 @@ def combine_data():
                             'Runtime':rq['Runtime'],
                             'IMDB Rating': rq['imdbRating'],
                             'IMDB Votes': rq['imdbVotes'],
-                            'Production':rq['Production'],
+                            'Production':rq['Production']
                             })
     info_df = pd.DataFrame(dict_list)
 
