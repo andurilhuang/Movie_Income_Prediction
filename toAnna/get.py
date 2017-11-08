@@ -5,6 +5,7 @@ import json
 import pandas as pd
 import numpy as np
 from datetime import datetime
+import time
 
 TMDB_KEY = "60027f35df522f00e57a79b9d3568423"
 OMDB_KEY = "6516c507"
@@ -15,14 +16,15 @@ def get_tmdb_id_list():
     import requests
     import json
     # from year 1996-2016
-    year = range(2006,2017) 
+    year = range(2006,2007) 
     ## 50 pages
-    page_num = range(1,50)
+    page_num = range(1,2)
     id_list = []
     
     tmdb_id_query = "https://api.themoviedb.org/3/discover/movie?" \
                     + "api_key=%s" \
                     + "&language=en-US&sort_by=release_date.asc" \
+                    + "&sort_by=popularity.desc" \
                     + "&include_adult=false&include_video=false" \
                     + "&page=%d" \
                     + "&primary_release_year=%d" 
@@ -44,14 +46,18 @@ def get_profit():
     profit_dict_list = []   
     for id in TMDB_ID_LIST:    
         request = requests.get(query %(id,TMDB_KEY)).json()
-        if request['revenue']>0 and request['budget']>0:    
-            profit_dict_list.append({'imdb_id':request['imdb_id'], 'revenue': request['revenue'],'budget': request['budget']})
-        else:
-            pass
+        #if request['revenue']>0 and request['budget']>0:    
+        profit_dict_list.append({'imdb_id':request['imdb_id'], 'revenue': request['revenue'],'budget': request['budget']})
+        #else:
+        #   pass
         #print profit_dict_list
         
     profit_df = pd.DataFrame(profit_dict_list)
     #profit_df = profit[profit['profit']>0]
     profit_df.to_csv('profit_by_imdb_id.csv')
     
+
+start = time.time()
 get_profit()
+stop = time.time()
+print(stop - start)
