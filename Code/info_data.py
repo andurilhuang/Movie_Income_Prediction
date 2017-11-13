@@ -1,4 +1,4 @@
-def combine_data():   
+def info_data():   
     import os
     import requests
     import json
@@ -44,5 +44,5 @@ def combine_data():
 
     #combine_df = profit_df.join(info_df,lsuffix='imdb_id', rsuffix='imdbID')
     #combine_df.to_csv('CombinedData_2.csv')
-
-combine_data()
+if __name__ == "__main__":
+    info_data()
