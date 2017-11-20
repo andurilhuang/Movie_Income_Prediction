@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime
 
-def Update_released_date(filename):
+def Cleaning_Data(filename):
     data = pd.read_csv(filename,encoding='latin1')
     # index of released date col
     index = data.columns.get_loc("Released")
@@ -27,13 +27,30 @@ def Update_released_date(filename):
         else:
             tag = 0
         dumpmonth_list.append(tag)
-
+           
     data.insert(loc=index+1,column = "Released on weekend",value=weekend_list)
     data.insert(loc=index+2,column = "Released on dump month",value=dumpmonth_list)
-    data.to_csv("FinalMerge_updateson_releaseddate.csv")
+    #Count the number of Language
+    data['Language'] = data.Language.str.count(',')+1
 
+    #Categorize the country
+    data["Country"] = data["Country"].map(lambda x: x.split(",")[0])
+
+    #Clean IMDB.Votes
+    data['IMDB.Votes'] = data['IMDB.Votes'].replace(',', '',regex=True)
+    data['IMDB.Votes'] = data['IMDB.Votes'].astype(int)
+    
+    #Clean Runtime
+    data['Runtime'] = data['Runtime'].replace('min', '',regex=True)
+    data['Runime'] = data['Runtime'].astype(int)
+
+    
+    data.to_csv("FinalMerge_updateson_cleaned_data.csv")
+
+   
+    
 
 
 if __name__ == "__main__":
     Filename = "FinalMerge.csv"
-    Update_released_date(Filename)
+    Cleaning_Data(Filename)
