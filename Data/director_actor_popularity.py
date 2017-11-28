@@ -75,7 +75,7 @@ for item in Directors_split:
             pop.append(result['results'][0]['popularity'])
         except:
             pop.append(ave_pop)
-    Director_Popularity.append(sum(pop))
+    Director_Popularity.append(avg(pop))
     dir_count = dir_count+1
     print (dir_count)
 
