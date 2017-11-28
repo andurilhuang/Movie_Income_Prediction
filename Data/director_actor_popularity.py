@@ -58,7 +58,7 @@ for item in Actors_split:
             pop_sum.append(result['results'][0]['popularity'])
         except:
             pop_sum.append(ave_pop)
-    Actor_Popularity.append(sum(pop_sum))
+    Actor_Popularity.append(np.mean(pop_sum))
     count = count+1
     print(count)
 df['actor_popularity'] = Actor_Popularity
@@ -75,7 +75,7 @@ for item in Directors_split:
             pop.append(result['results'][0]['popularity'])
         except:
             pop.append(ave_pop)
-    Director_Popularity.append(avg(pop))
+    Director_Popularity.append(np.mean(pop))
     dir_count = dir_count+1
     print (dir_count)
 
