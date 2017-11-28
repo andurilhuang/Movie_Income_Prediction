@@ -79,8 +79,8 @@ for item in Directors_split:
     dir_count = dir_count+1
     print (dir_count)
 
-df['director_popularity'] = Actor_Popularity
+df['director_popularity'] = Director_Popularity
 
-df.tail()    
+
 
         
