@@ -138,7 +138,7 @@ def get_info(start_year, end_year, start_page, end_page):
         if r.status_code == 200:
             try:
                 rq = requests.get(query % (imdb_id, OMDB_KEY)).json()
-                dict_list.append({'imdbID':imdb_id,
+                dict_list.append({'imdbID':rq['imdbID'],
                                   'Title': rq['Title'],
                                   'Country':rq['Country'],
                                   'Language':rq['Language'],
@@ -149,8 +149,8 @@ def get_info(start_year, end_year, start_page, end_page):
                                   'Actors':rq['Actors'],
                                   'Director':rq['Director'],
                                   'Runtime':rq['Runtime'],
-                                  'IMDB Rating': rq['IMDB.Rating'],
-                                  'IMDB Votes': rq['IMDB.Votes'],
+                                  'IMDB Rating': rq['imdbRating'],
+                                  'IMDB Votes': rq['imdbVotes'],
                                   'Production':rq['Production']
                                  })
             except KeyError as reason:
@@ -204,3 +204,4 @@ def call_data(start_year, end_year, start_page, end_page):
 def get_cleaned_data():
     import pandas as pd
     return pd.read_csv("data\data_clean.csv",encoding = "latin1")
+

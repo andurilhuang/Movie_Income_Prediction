@@ -1,41 +1,21 @@
-,budget,imdb_id,revenue
-0,20000000,tt2911666,88761661
-1,165000000,tt2245084,652105443
-2,34000000,tt1790864,348319861
-3,40000000,tt2872732,126546825
-4,3300000,tt2582802,13092000
-5,170000000,tt2103281,710644566
-6,14000000,tt2084970,233555708
-7,125000000,tt1951265,752100229
-8,170000000,tt2015381,773328629
-9,250000000,tt2310332,956019788
-10,68000000,tt2713180,211817906
-11,125000000,tt1291150,477200000
-12,210000000,tt2109248,1091405097
-13,165000000,tt0816692,675120017
-14,18000000,tt2562232,103215094
-15,61000000,tt2267998,369330363
-16,250000000,tt1877832,747862775
-17,170000000,tt1843866,714766572
-18,70000000,tt0829150,215529201
-19,48000000,tt2446042,325771424
-20,74000000,tt2293640,1156730962
-21,61000000,tt4046784,311256926
-22,245000000,tt2379713,880674609
-23,40000000,tt2322441,571006128
-24,245000000,tt2488496,2068223624
-25,155000000,tt1340138,440603537
-26,190000000,tt2820852,1506249360
-27,130000000,tt0478970,519311965
-28,30000000,tt3397884,84025816
-29,280000000,tt2395427,1405403694
-30,175000000,tt2096673,857611174
-31,150000000,tt1392190,378858340
-32,150000000,tt0369610,1513528810
-33,110000000,tt2908446,295238201
-34,49000000,tt1823672,104399548
-35,4000000,tt1881002,187112
-36,160000000,tt1951266,653428261
-37,81000000,tt2802144,414351546
-38,110000000,tt2126355,470490832
-39,190000000,tt1964418,209154322
+,budget,imdb_id,revenue,Actors,Country,Director,Genre,IMDB Rating,IMDB Votes,Language,Production,Rated,Released,Runtime,Title,Year,imdbID
+0,150000000,tt0800369,449326618,"Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins",USA,Kenneth Branagh,"Action, Adventure, Fantasy",7.0,"595,062",English,Paramount Pictures,PG-13,06 May 2011,115 min,Thor,2011,tt0800369
+1,110000000,tt1324999,712171856,"Taylor Lautner, Gil Birmingham, Billy Burke, Sarah Clarke",USA,Bill Condon,"Adventure, Drama, Fantasy",4.9,"194,192","English, Portuguese",Summit Entertainment,PG-13,18 Nov 2011,117 min,The Twilight Saga: Breaking Dawn - Part 1,2011,tt1324999
+2,125000000,tt1201607,1342000000,"Ralph Fiennes, Michael Gambon, Alan Rickman, Daniel Radcliffe","USA, UK",David Yates,"Adventure, Drama, Fantasy",8.1,"615,742",English,Warner Bros. Pictures,PG-13,15 Jul 2011,130 min,Harry Potter and the Deathly Hallows: Part 2,2011,tt1201607
+3,93000000,tt1318514,482860185,"Andy Serkis, Karin Konoval, Terry Notary, Richard Ridings","USA, UK, Canada",Rupert Wyatt,"Action, Drama, Sci-Fi",7.6,"444,549","English, Sign Languages",20th Century Fox,PG-13,05 Aug 2011,105 min,Rise of the Planet of the Apes,2011,tt1318514
+4,0,tt1316616,0,"Charlie Cox, Wes Bentley, Dougray Scott, Rodrigo Santoro","Spain, USA",Roland Joffé,"Biography, Drama, War",5.8,"4,093",English,Samuel Goldwyn Films,PG-13,25 Mar 2011,122 min,There Be Dragons,2011,tt1316616
+5,140000000,tt0458339,370569774,"Chris Evans, Hayley Atwell, Sebastian Stan, Tommy Lee Jones",USA,Joe Johnston,"Action, Adventure, Sci-Fi",6.9,"571,319","English, Norwegian, French",Paramount Pictures,PG-13,22 Jul 2011,124 min,Captain America: The First Avenger,2011,tt0458339
+6,70000000,tt1217613,202466756,"Aaron Eckhart, Ramon Rodriguez, Will Rothhaar, Cory Hardrict",USA,Jonathan Liebesman,"Action, Sci-Fi",5.8,"161,303","English, Ukrainian",Sony Pictures/Columbia Pictures,PG-13,11 Mar 2011,116 min,Battle Los Angeles,2011,tt1217613
+7,380000000,tt1298650,1045713802,"Johnny Depp, Penélope Cruz, Geoffrey Rush, Ian McShane","USA, UK",Rob Marshall,"Action, Adventure, Fantasy",6.6,"413,036","English, Spanish",Walt Disney Pictures,PG-13,20 May 2011,136 min,Pirates of the Caribbean: On Stranger Tides,2011,tt1298650
+8,110000000,tt0433035,299268508,"Hugh Jackman, Dakota Goyo, Evangeline Lilly, Anthony Mackie","USA, India",Shawn Levy,"Action, Drama, Family",7.1,"269,385","English, Ukrainian",Walt Disney Pictures,PG-13,07 Oct 2011,127 min,Real Steel,2011,tt0433035
+9,80000000,tt1411697,254455986,"Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha",USA,Todd Phillips,"Comedy, Mystery",6.5,"404,866","English, Thai",Warner Bros. Pictures,R,26 May 2011,102 min,The Hangover Part II,2011,tt1411697
+10,200000000,tt1216475,559852396,"Larry the Cable Guy, Owen Wilson, Michael Caine, Emily Mortimer",USA,"John Lasseter, Brad Lewis(co-director)","Animation, Adventure, Comedy",6.2,"118,522","English, Japanese, Italian, French",Walt Disney Pictures/PIXAR,G,24 Jun 2011,106 min,Cars 2,2011,tt1216475
+11,20000000,tt1033575,177243185,"George Clooney, Shailene Woodley, Amara Miller, Nick Krause",USA,Alexander Payne,"Comedy, Drama",7.3,"214,423",English,Fox Searchlight Pictures,R,09 Dec 2011,115 min,The Descendants,2011,tt1033575
+12,145000000,tt1229238,694713380,"Tom Cruise, Paula Patton, Simon Pegg, Jeremy Renner","USA, United Arab Emirates, Czech Republic",Brad Bird,"Action, Adventure, Thriller",7.4,"391,257","English, Russian, French, Arabic, Swedish",Paramount Studios,PG-13,21 Dec 2011,132 min,Mission: Impossible - Ghost Protocol,2011,tt1229238
+13,30000000,tt6019206,0,"Michael Bowen, David Carradine, Shin'ichi Chiba, Julie Dreyfus",USA,Quentin Tarantino,"Action, Crime",8.8,"1,554",N/A,N/A,N/A,27 Mar 2011,247 min,Kill Bill: The Whole Bloody Affair,2011,tt6019206
+14,13000000,tt1675434,426480871,"François Cluzet, Omar Sy, Anne Le Ny, Audrey Fleurot",France,"Olivier Nakache, Eric Toledano","Biography, Comedy, Drama",8.6,"589,157","French, English",The Weinstein Company,R,02 Nov 2011,112 min,The Intouchables,2011,tt1675434
+15,15000000,tt0780504,78054825,"Ryan Gosling, Carey Mulligan, Bryan Cranston, Albert Brooks",USA,Nicolas Winding Refn,"Crime, Drama",7.8,"477,347","English, Spanish",FilmDistrict,R,16 Sep 2011,100 min,Drive,2011,tt0780504
+16,125000000,tt1515091,334615000,"Robert Downey Jr., Jude Law, Noomi Rapace, Rachel McAdams",USA,Guy Ritchie,"Action, Adventure, Crime",7.5,"366,983","English, French, Italian, German, Romany",Warner Bros. Pictures,PG-13,16 Dec 2011,129 min,Sherlock Holmes: A Game of Shadows,2011,tt1515091
+17,50000000,tt1650062,260095987,"Joel Courtney, Jessica Tuck, Joel McKinnon Miller, Ryan Lee",USA,J.J. Abrams,"Mystery, Sci-Fi, Thriller",7.0,"305,350",English,Paramount Pictures,PG-13,10 Jun 2011,112 min,Super 8,2011,tt1650062
+18,200000000,tt1133985,219851172,"Ryan Reynolds, Blake Lively, Peter Sarsgaard, Mark Strong",USA,Martin Campbell,"Action, Adventure, Sci-Fi",5.6,"237,512",English,Warner Bros. Pictures,PG-13,17 Jun 2011,114 min,Green Lantern,2011,tt1133985
+19,90000000,tt1568346,232617430,"Daniel Craig, Rooney Mara, Christopher Plummer, Stellan Skarsgård","USA, Sweden, Norway",David Fincher,"Crime, Drama, Mystery",7.8,"360,091",English,Sony Pictures,R,21 Dec 2011,158 min,The Girl with the Dragon Tattoo,2011,tt1568346
