@@ -197,7 +197,7 @@ def call_data(start_year, end_year, start_page, end_page):
     print("start comibing data")
     df = revenue_df.join(info_df, lsuffix='imdb_id', rsuffix='imdbID')
     print("data_crawling finished!")
-    df.to_csv("data\data_clean_user.csv")
+    df.to_csv("data\data_raw_user.csv")
     combine_df = pd.read_csv("data\data_raw_user.csv",encoding = "latin1")
     return combine_df
 
