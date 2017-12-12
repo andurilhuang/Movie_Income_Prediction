@@ -112,7 +112,7 @@ def clean_analysis_data():
     df['IMDB.Votes'] = df['IMDB.Votes'].replace(',', '', regex=True)
     df['IMDB.Votes'] = df['IMDB.Votes'].astype(int)
 
-        # language
+    # language
     df['Language'] = df.Language.str.count(',')+1
     # rated
     df["Rated"] = df["Rated"].replace(np.nan, "UNRATED")\
@@ -173,7 +173,7 @@ def clean_regression_data():
     normalizer = preprocessing.MinMaxScaler()
     x1 = normalizer.fit_transform(x1)
     x1 = pd.DataFrame(x1, columns = ['IMDB.Rating', 'IMDB.Votes', 'Language', 'Runtime',\
-                                     'budget', 'actor_popularity','director_popularity']) 
+                                     'budget', 'actor_popularity','director_popularity'])
     x2 = x2.reset_index().drop("index", axis = 1)
     X = pd.concat([x1, x2], axis = 1)
     df_for_model = pd.concat([X, y], axis = 1)

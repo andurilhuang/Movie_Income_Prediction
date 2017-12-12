@@ -1,5 +1,5 @@
 import unittest
-from ..import get_data as gd
+from movie_predict_modules import get_data as gd
 
 class FunctionRunTest(unittest.TestCase):
     """Test if functions run succesfully with correct input"""
