@@ -6,35 +6,36 @@ import pandas as pd
 import random
 import requests
 
+
 def get_act_pop_avg():
     """get average poplularity rating for actos by sampling"""
 
     query_ave = "https://api.themoviedb.org/3/person/popular?" \
         "api_key=60027f35df522f00e57a79b9d3568423&language=en-US&page=%d"
-    rd = random.sample(range(1,1000),20)
+    rd = random.sample(range(1,1000),20)  
     rd_pop=[]
-
+    
     for n in rd:
         rq = requests.get(query_ave %n).json()
         for item in rq['results']:
             rd_pop.append(item['popularity'])
-
+            
     ave_pop = np.mean(rd_pop)
     return ave_pop
 
 def clean_director_actor():
     """add director_actor popularity rating"""
-    #ave_pop is average popularity the dev team got by running get_act_pop_avg
-    #dev team assume no need to run again to get new ave_pop
+
     ave_pop = 2.08979
     TMDB_KEY = '60027f35df522f00e57a79b9d3568423'
-    df = pd.read_csv("data\data_raw_user.csv",encoding = "latin1")
-    Actors_split = []
 
+    df = pd.read_csv("FinalMerge.csv", encoding="latin1")       
+
+    Actors_split = []
     for item in df['Actors']:
         item = str(item).split(",")
         Actors_split.append(item)
-
+        
     Directors_split =[]
     for item in df['Director']:
         item = str(item).split(",")
@@ -43,12 +44,12 @@ def clean_director_actor():
     for item in Actors_split:
         for i in range(len(item)):
             item[i] = str(item[i]).strip()
-
+            
     for item in Directors_split:
         for i in range(len(item)):
-            item[i] = str(item[i]).strip()
+            item[i] = str(item[i]).strip()        
 
-    Actor_Popularity = []
+    Actor_Popularity = [] 
     count = 0
     url = "https://api.themoviedb.org/3/search/person"
     for item in Actors_split:
@@ -64,8 +65,8 @@ def clean_director_actor():
         count = count+1
         print(count)
     df['actor_popularity'] = Actor_Popularity
-    Director_Popularity = []
 
+    Director_Popularity = [] 
     dir_count = 0
 
     for item in Directors_split:
@@ -83,13 +84,12 @@ def clean_director_actor():
 
     df['director_popularity'] = Director_Popularity
 
-    return df
-#.to_csv("data\data_clean_user.csv",encoding = "latin1")
+    return df.to_csv("data_clean.csv")
 
-def clean_regression_data():
+def clean_data():
     """preparing data for regression"""
-
-    df = pd.read_csv("data\data_clean.csv", encoding = "latin1")
+    
+    df = pd.read_csv("data_clean.csv", encoding = "latin1")
     # drop unnecessary columns
     df = df.drop(["Unnamed: 0", "imdb_id", "Title", "X.x", "X.y", "Country",\
                   "Actors", "Director", "Year", "Production"], axis=1)
@@ -102,7 +102,7 @@ def clean_regression_data():
     # revenue
     df["revenue"] = df["revenue"].map(lambda x:math.log10(x))
     # genre
-    df = pd.concat([df, df['Genre'].str.get_dummies(sep=', ')], axis=1)
+    df = pd.concat([df, df['Genre'].str.get_dummies(sep=', ')], axis=1) 
     df['Thriller'] = df[['Thriller', 'Horror']].sum(axis=1)
     df['Fantasy'] = df[['Fantasy', 'Sci-Fi']].sum(axis=1)
     df['Other_genre'] = df[['Music', 'History', 'Sport', 'War', 'Western',\
@@ -144,7 +144,6 @@ def clean_regression_data():
     for each in release_dates:
         month = each.month
         if month == 12 or month == 1 or month == 2 or month == 8 or month == 9:
-
             tag = 0
         else:
             tag = 1
@@ -166,7 +165,7 @@ def clean_regression_data():
     normalizer = preprocessing.MinMaxScaler()
     x1 = normalizer.fit_transform(x1)
     x1 = pd.DataFrame(x1, columns = ['IMDB.Rating', 'IMDB.Votes', 'Language', 'Runtime',\
-                                     'budget', 'actor_popularity','director_popularity'])
+                                     'budget', 'actor_popularity','director_popularity']) 
     x2 = x2.reset_index().drop("index", axis = 1)
     X = pd.concat([x1, x2], axis = 1)
     df_for_model = pd.concat([X, y], axis = 1)

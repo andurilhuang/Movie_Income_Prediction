@@ -201,7 +201,3 @@ def call_data(start_year, end_year, start_page, end_page):
     combine_df = pd.read_csv("data\data_raw_user.csv",encoding = "latin1")
     return combine_df
 
-def get_cleaned_data():
-    import pandas as pd
-    return pd.read_csv("data\data_clean.csv",encoding = "latin1")
-
